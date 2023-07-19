@@ -1,0 +1,103 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: poolsystem
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: mongocreds
+  namespace: poolsystem
+spec:
+  encryptedData:
+    ME_CONFIG_BASICAUTH_PASSWORD: AgAr11XWYSkzYzLDkwOKXWbmUhIfU1e1YxNqVD4/0VaQ/Pn9vpkSftel4KTFCXcZYfmH9YlNJ3A1InG4f0f/Fio2Pka9ug5QzNbqc4T/aZkMvOspx0Onu0rlK0je6y3KCzOaS0rzfAkT2wJEKBEJlAOtA4ol92cX04/ZmV6A3NIZqW8I96V074fejgVz0/7omC0wSXzgbRKUa4huZP3+5390WJaw5OTddxII9w83fcqTN7V4YJsx6bIHa/4gImPkuWQz0Zn85TbgACjECtRYhLZ2BIROSk1TFCukyEgZ2njXSTWSovooyQ0t3sUEvI6nvAK6ifBx5dVmgjN5UnNhzArPbBgkC5ZH7NSSjSK1ls353Mm11vWlvg7yB1VWBnNe1L6jR3C+xLhWuTN3GJXS2JC77dtCPMvwbcGCOcPDrDkfDdVMbe8oKajatP+vdQ8vl1MvCSPpuC80mdc5gBsAkCA/N5CTLWG9X4bjnIttivXZWlFNVdQ5N1p8jy6AEIx+tqeW9WVcFmNY9cWOrAWCPzP5XD9/b6xorsUfSbJMtpKgM5Rv8uAeEKbmEy0vHwbGMg2qxPRw1obNy3Sph171umFaGwXlO2igxUOZR411ZIZvHzCrFFEgKpDN/aKRrdN/zUE0GAtj32qG8YKRkAGJQavJ+sn5el2ZFFsgmgDhk2OY3MCAG1ohWLpHvnjZmP051qDrW0jZ9cfb3KZwLqIbYq75Xy+9Oy5Li+A=
+    ME_CONFIG_BASICAUTH_USERNAME: AgBJcTdHj+/ejpwLEXTU4ealjOSEPDZdfrlaI7crUis5JM1J6HhtgPx6aBVQSjE82a89wqjzvE1l4WWTnCQQprXqVDTqLlcJJPaXDw0D+Drqi7LKUprqQqWEvhHvyVcBzISQf8ZmffLGRuz+pTRTRBxqtJgvGDfDcM0VacudUoLy4585czSVDCfQjkAFxlPk8r4ylBRoDCYmsYn+J+7y3sRm84B1hZddpLvI3PsgxvkkUpvvgwbqoLc/EJ+r01vCRXJqSE3V42e99plPc/nLPc8PaSmHI9RJXxRxp0tJNwrQy8Dj94+18gOP6rIVibk7PLFhfO/QotxgxMOGk6b1qyEiSfZRG+BL0iVGo31EJ2EEFDvQ/tbJ9Hny5aHmjw+/q+L1mbTblaSBGan8LxsO61uV+1o6uco/rmtDhNdewEjOwiZmmrwu9N7vLl0hROVJj2Y3zvF3TVacHTlKyrMS8OdivZgQNlgf62DiA8ik3D8EBJCyvX74hNcZjBUilu3RY6nbp7rpKD/xxM/7geGsoHjPdtXGarIN7+szxAz6ZIfQ+AcQ31+ZV1xpNXKbBWFhX2/sbp11Dn3xiu/mSSZ5kwUiCsKXS5tXzBoWI/wRS9kk+10K1LgUaqea+jyaSYVmSEThnpXSVaU/1TRJ6BpCL3xB6s5VqZSFsF/bgCQaAjmcGBSU3hUcQN50+ljH54XsGKGbf6ff7g==
+    ME_CONFIG_MONGODB_SERVER: AgBb7whSpfFnq0k/bHtIhU2+ICksCR3J9FO7imoWDM1tkIHo4FFU+/kbNJzNeGcUEzPea9jZdr0KaN6jW+gv8wDmQIwkYnv2cV4PkCaKTXGsAHKLi0kku2UFLlOcgRdubP/c51YKvXgUANWb3kTFjOy1BQoO4sse9Os8dnv4FlN30V0vh2sOel6oH3/VJslW+rMmXQBIScFZcMvan0DKXnV1e1bPXJo7Q2Te+Y1rlOjPtdCWM36ww3XUgFk22e4Jal3lRuye8HhXIfUfv5Yhx09Ly592l+q2THfnLmiuUTz8NT+9P8aI4eF8mfUaQnnkJF9Nequr2J1gGVMjp2YD+4fhgnCCJY5VB4B4ZeM9iGAfMJ5G8PELh3vUSVhUYAzlTxZTZBIjG1PFWNThRlmqObEVK63snrn3G9lRZNJwz5FmSZMnT4Q5AZffyscQvaB4hs1Q90ikOZ6HNC7oZkOwc5+Vq1dhZcmhXWp7u0tZPbd50Ai5KHK3+mucK50qdpPGQ1JzvdZUKlRMFKRQrlTWoaJrrQSCRgMLjzcgcQM2B17FQQPD/DMnb6AmUVg/hu2hT0gOxhpO+23q0gH5MOHpiFH081N5lp++NwHe6NfKwJQvXDBSHyLRQCfQJL2W1rPPd/qXreU2QsXGsHNzUthzk5DuQv8U6Q5Lc8BEA2utRkMuutDLPBm33UglLaU4cDWW7ETQnJZN2VdU7z4=
+    MONGO_INITDB_ROOT_PASSWORD: AgB0zcMVkLmuX6e8MjbFPqw/Gm0KmnBIBVknPp3gOznrxbklGdP495usBnyRbAKWWOZySeGGS+LZWasSLTqqNtKmMQmM6TfCcbPRnedzI7NrBUbzgphEQ1VVov/aeT+4M2g6q6LvTXEe2WliAoM+DdOfa/i007eQglwEEFXP4X88gNYR8oFusv2LWvAotUcJN0UoDJ36m+2oveD/lzZaRvRiZtobF32B6ZqDoXPtbfDDddMTfj1/n/ehP6ocEjIqrq0tE5PLivvHQSszrXVZXf6pvPm2og2DjqmJL6RC7G8oYs2l+Ri7SaiCAo5zvQg+FIJfwnjqL49Y1EMP9nLJ9Gb+vFTfv0mX64CALPdP/sYv4CQzu14k5JUdNYs7WOsmwVmJ6pGH8kcfyp2a2wU9PL1I+M7THw9ea/qWic+aBfm3lfSXJNCTM4uG5GULW5opdzlx/2GaSXsOvF0zA/tA+S0aSo18RVGw0eF5VWZ/4wk+WfqMoT4GGpT5HgxdVHXXpJJH1RotfZn1hmyijmdbFTWUDlCi0YVLY37bV9bzLmqf3/8TOWybSIGI7zdQQ+KKREpLW4xf/U4cGmGyUiluMUxnQ3BajzEJLrSU3d8N7VnoOoZYLDjh+UlU0yf361s8+nUnITppSG+KSITaKm+iqq3R579HzMx1u0gW21V/W9kQ91+9mzi3NIpmPs+B3x1WKTGiAbdSyIjH7zmrMIuI2koNn54u
+    MONGO_INITDB_ROOT_USER: AgBwKGdgrXiLn/HdgIjdQS/UELf7XhA4b1W6BTT34oSF+EISbpxChKA7UJe/+Z+9YzZ+hjwuLpUM8g2CKiNLEBdzYii053oqqra/eJACvmUW/Ls5vby7+vjTr0SOYPiCb9zXhuhlfPkVWaDglXJEYmv6f64CBn8bv97t10rN/RRjQc6TRpPrBltWjCvwu01Yhw+jjZUvwV7Qm5vvZmPo2KhZgvfrAU6Be/CwlRTSaUQqDJrraeDIJj452KjiZn1ChOQw13G0bNIuuT+JQW8vXPDdJ1PGdG0ZskN5hQdyuNbxlAaBSSoNpJIit5pF7z7zLMrDGd+0o/iAd/523ct947wL9kWhhptHDnxPU2gzTaemqt3J29rgh7TCwr4AwmsQVHw14njE6P/WA/wZ34P2M41Ma0lvIQ5MWxBzjt1eMMQoZ5g/Sa9bFGadL5fFsgLjEzz+/ZjyZ7AQ1OfL8GTftEO6gUenxhQ7SHIasE6NE1cHpqRhGS5bmq/4jwriCxdZVmu7kixGo13FghivVVr+fcbm3dpa62pfiQy/zn/mtxr+Qkag6o/a+oboW6utGOhIj33qnOFqz1JJGYLdm/wiL5gmB3JGGYk9bYGEHJeWC16Jg8f1CY6xMDEGLphKKi9MwoSeh6sw+yzjBk5CJriaXHYY0BMAJHEN5cwCIeIV78leiV7V4mHhP2vHk6mzmjrQTTidHo8Z
+  template:
+    metadata:
+      creationTimestamp: null
+      name: mongocreds
+      namespace: poolsystem
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb-deployment
+  namespace: poolsystem
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb
+  template:
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+      - name: mongodb
+        image: amd64/mongo:4.4.23
+        ports:
+        - containerPort: 27017
+        env:
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongocreds
+              key: MONGO_INITDB_ROOT_PASSWORD
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongocreds
+              key: MONGO_INITDB_ROOT_USER
+      - name: mongo-express
+        image: mongo-express:0.54.0
+        ports:
+        - containerPort: 8081
+        env:
+        - name: ME_CONFIG_MONGODB_ADMINUSERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongocreds
+              key: MONGO_INITDB_ROOT_USER
+        - name: ME_CONFIG_MONGODB_ADMINPASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongocreds
+              key: MONGO_INITDB_ROOT_PASSWORD
+        - name: ME_CONFIG_BASICAUTH_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongocreds
+              key: ME_CONFIG_BASICAUTH_USERNAME
+        - name: ME_CONFIG_BASICAUTH_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongocreds
+              key: ME_CONFIG_BASICAUTH_PASSWORD
+        - name: ME_CONFIG_MONGODB_SERVER
+          value: localhost
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+  namespace: poolsystem
+spec:
+  selector:
+    app: mongodb
+  ports:
+    - name: express
+      protocol: TCP
+      port: 8081
+      targetPort: 8081
+      nodePort: 30081
+    - name: mongo
+      protocol: TCP
+      port: 27017
+      targetPort: 27017
+      nodePort: 30007
+  type: NodePort
