@@ -53,6 +53,9 @@ spec:
             secretKeyRef:
               name: mongocreds
               key: MONGO_INITDB_ROOT_USER
+        volumeMounts:
+        - name: mongodbclaim
+          mountPath: /data/db
       - name: mongo-express
         image: mongo-express:0.54.0
         ports:
@@ -101,3 +104,15 @@ spec:
       targetPort: 27017
       nodePort: 30007
   type: NodePort
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongodbclaim
+  namespace: poolsystem
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
