@@ -83,10 +83,10 @@ spec:
               key: ME_CONFIG_BASICAUTH_PASSWORD
         - name: ME_CONFIG_MONGODB_SERVER
           value: localhost
-    volumes:
-    - name: mongodbclaim
-      persistentVolumeClaim:
-        claimName: mongodbclaim 
+      volumes:
+      - name: mongodbclaim
+        persistentVolumeClaim:
+          claimName: mongodbclaim 
 ---
 apiVersion: v1
 kind: Service
